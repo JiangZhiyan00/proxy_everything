@@ -84,7 +84,7 @@ async function handleRequest(request) {
 
 // 确保 URL 带有协议
 function ensureProtocol(url, defaultProtocol) {
-  return url.startsWith("https://") || url.startsWith("http://")
+  return url.startsWith("http://") || url.startsWith("https://")
     ? url
     : defaultProtocol + "//" + url;
 }
