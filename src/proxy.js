@@ -1,7 +1,9 @@
+// worker固定格式，不可更改
 addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request));
 });
 
+// 必须是这个方法名（worker固定格式，不可更改）
 async function handleRequest(request) {
   try {
     const url = new URL(request.url);
