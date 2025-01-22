@@ -14,12 +14,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
-      - name: Cache Wrangler Dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.wrangler
-          key: ${{ runner.os }}-wrangler-cache
 
       - name: Get current date
         id: current_date
