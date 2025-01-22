@@ -162,8 +162,8 @@ function getRootHtml() {
       <meta property="og:image" content="https://img.icons8.com/?size=100&id=VY5nd0T1utk3&format=png&color=000000">
       <meta name="robots" content="index, follow">
       <meta http-equiv="Content-Language" content="zh-CN">
-      <meta name="copyright" content="Copyright © ymyuuu">
-      <meta name="author" content="ymyuuu">
+      <meta name="copyright" content="Copyright © jiangzhiyan">
+      <meta name="author" content="jiangzhiyan">
       <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://img.icons8.com/?size=100&id=VY5nd0T1utk3&format=png&color=000000">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
