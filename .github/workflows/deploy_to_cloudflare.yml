@@ -14,17 +14,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      
+      - name: Cache Wrangler Dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.wrangler
+          key: ${{ runner.os }}-wrangler-cache
 
       - name: Get current date
         id: current_date
         run: |
-          current_date=$(date +'%Y-%m-%d')
-          echo "Current date is $current_date"
-          echo "current_date=$current_date" >> $GITHUB_ENV
+          echo "current_date=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
         with:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          command: deploy src/proxy.js --name proxy --compatibility-date ${{ env.current_date }}
+          command: deploy src/proxy.js --name proxy --compatibility-date ${{ env.current_date }} --skip-build
