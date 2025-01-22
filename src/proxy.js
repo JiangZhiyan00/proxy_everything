@@ -144,7 +144,7 @@ function setNoCacheHeaders(headers) {
 // 设置 CORS 头部
 function setCorsHeaders(headers) {
   headers.set("Access-Control-Allow-Origin", "*");
-  headers.set("Access-Control-Allow-Methods", "*");
+  headers.set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   headers.set("Access-Control-Allow-Headers", "*");
 }
 
