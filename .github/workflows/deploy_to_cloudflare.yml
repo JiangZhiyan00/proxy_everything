@@ -31,4 +31,4 @@ jobs:
         with:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          command: deploy src/proxy.js --name proxy --compatibility-date ${{ env.current_date }} --skip-build
+          command: deploy src/proxy.js --name proxy --compatibility-date ${{ env.current_date }}
